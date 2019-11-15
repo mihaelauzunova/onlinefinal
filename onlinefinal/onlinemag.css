@@ -1,0 +1,832 @@
+ html {
+     scroll-behavior: smooth;
+ }
+
+ *,
+ *:before,
+ *:after {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: Helvetica, sans-serif;
+     background-color: #eefaec;
+ }
+
+ main {
+     margin-top: 150px;
+ }
+
+ .nav_link {
+     color: #000000;
+ }
+
+ .navigation_container {
+     background-color: #fff;
+     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+     position: fixed;
+     width: 100%;
+     z-index: 3;
+     top: 0;
+     left: 0;
+     font-size: 24px;
+     font-family: 'McLaren', cursive;
+     flex-wrap: wrap;
+ }
+
+ /* This is the css code for the Home page of my Online Magazine*/
+ .first_content,
+ .exercise_content {
+     display: flex;
+     flex-wrap: wrap;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 80px;
+     width: 800px;
+ }
+
+ .motiv_image {
+     display: inline-block;
+     width: 400px;
+     height: 450px;
+ }
+
+ .motiv_container {
+     display: inline-block;
+     font-size: 22px;
+     width: 400px;
+     padding-top: 110px;
+     padding-left: 35px;
+     align-items: center;
+ }
+
+ .exercise_image {
+     width: 400px;
+ }
+
+ .readmore {
+     font-size: 22px;
+     color: #bcbcbc;
+ }
+
+ .food_section {
+     display: flex;
+     justify-content: center;
+     max-width: 100%;
+     margin-bottom: 100px;
+ }
+
+ .food_content {
+     font-size: 22px;
+     width: 350px;
+     padding-top: 60px;
+ }
+
+ .buddhabowl {
+     display: inline-block;
+     width: 430px;
+     height: 300px;
+     padding-left: 15px;
+ }
+
+ .beginning {
+     display: inline-block;
+     flex-wrap: wrap;
+     font-size: 22px;
+     width: 300px;
+     padding-left: 55px;
+     align-items: center;
+     padding-top: 50px;
+ }
+
+ /* And some of the code is mutual for all html files*/
+ .menu {
+     justify-content: space-around;
+     list-style: none;
+     overflow: hidden;
+     background-color: #fff;
+     padding: 10px 20px;
+     margin-top: 12px;
+ }
+
+ .nav_link {
+     display: block;
+     padding: 20px 20px;
+     border-right: 1px solid #f4f4f4;
+     text-decoration: none;
+ }
+
+ .nav_link:hover {
+     background-color: #49B8C5;
+ }
+
+ .logo nav_link {}
+
+ .logo {
+     display: block;
+     float: left;
+     font-size: 1.5em;
+     padding: 10px 20px;
+     margin-top: 12px;
+     text-decoration: none;
+ }
+
+ .some_link {
+     color: #ffffff;
+     text-decoration: none;
+ }
+
+ .input_searchfield {
+     float: left;
+     padding: 8px;
+     margin-top: 8px;
+     margin-left: 8px;
+     font-size: 15px;
+     font-family: 'McLaren', cursive;
+     border-left: #49B8C5 solid 1px;
+     border-top: #49B8C5 solid 1px;
+     border-bottom: #49B8C5 solid 1px;
+ }
+
+ .searchbutton {
+     float: right;
+     padding: 6px 10px;
+     margin-top: 12px;
+     margin-right: 10px;
+     background: #ddd;
+     font-size: 18px;
+     border: none;
+     cursor: pointer;
+ }
+
+ .menu {
+     clear: both;
+     text-align: center;
+     max-height: 0;
+     transition: max-height .2s ease-out;
+ }
+
+ .menu-icon {
+     cursor: pointer;
+     display: inline-block;
+     float: right;
+     padding: 28px 20px;
+     position: relative;
+     user-select: none;
+     flex-wrap: wrap;
+     padding-top: 60px;
+     padding-left: 0px;
+ }
+
+ .selected_contentsection {
+     background-color: #49B8C5;
+ }
+
+ .navicon {
+     background: #333;
+     display: block;
+     height: 2px;
+     position: relative;
+     transition: background .2s ease-out;
+     width: 18px;
+ }
+
+ .navicon:before,
+ .navicon:after {
+     content: "";
+     background: #333;
+     display: block;
+     height: 100%;
+     position: absolute;
+     transition: all .2s ease-out;
+     width: 100%;
+ }
+
+ .navicon:before {
+     top: 5px;
+ }
+
+ .navicon:after {
+     top: -5px;
+ }
+
+ .menu-btn {
+     display: none;
+ }
+
+
+ .menu-btn:checked ~ .menu {
+     max-height: 400px;
+ }
+
+ .menu-btn:checked ~ .menu-icon .navicon {
+     background: transparent;
+ }
+
+ .menu-btn:checked ~ .menu-icon .navicon:before {
+     transform: rotate(-45deg);
+ }
+
+ .menu-btn:checked ~ .menu-icon .navicon:after {
+     transform: rotate(45deg);
+ }
+
+ .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+ .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+     top: 0;
+ }
+
+ .form_container {
+     float: right;
+     margin-top: 7px;
+     padding: 10px 0px;
+     margin-top: 25px;
+ }
+
+ .menu_navigation {
+     display: flex;
+     flex-wrap: wrap;
+     max-width: 100%;
+     justify-content: space-around;
+
+ }
+
+ .quote_image {
+     max-width: 100%;
+     padding: 30px 100px 16px 24px;
+     margin: 0 16px 16px 16px;
+ }
+
+ .bowl_image {
+     width: 450px;
+     float: right;
+     margin: 0 100px 20px 20px;
+ }
+
+ .second_section {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 16px 24px 16px 24px;
+     margin: 0 16px 16px 16px;
+     justify-content: center;
+     align-content: space-between;
+     font-size: 30px;
+ }
+
+ .third_section {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 16px 24px 16px 24px;
+     margin: 0 16px 16px 16px;
+     justify-content: center;
+     font-size: 30px;
+ }
+
+ .image_home {
+     display: flex;
+     flex-wrap: wrap;
+     width: 700px;
+     margin: 0 auto 0 auto;
+ }
+
+ .text_container1 {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     font-size: 22px;
+     margin: 40px auto 0 auto;
+     width: 650px;
+     max-width: 100%;
+
+ }
+
+ /* Here is the code for my Contact page */
+ .newsletter {
+     position: relative;
+     height: 150px;
+     background-size: cover;
+ }
+
+ .form {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+     text-align: center;
+     background: #7AC1CC;
+     padding: 32px 32px 32px 32px;
+     width: 80%;
+     font-size: 24px;
+     flex-wrap: wrap;
+
+ }
+
+ .form_headline {
+     color: white;
+     font-size: 30px;
+     margin-bottom: 11px;
+ }
+
+ .form_label {
+     font-size: 25px;
+     color: white;
+ }
+
+ .form_element {
+     padding: 10px 10px 10px 10px;
+     margin: 0 0 5px 0;
+     font-size: 25px;
+ }
+
+ .news {
+     margin-bottom: 20px;
+ }
+
+ .fitness_image {
+     display: flex;
+     margin-left: auto;
+     margin-right: auto;
+     width: 800px;
+     height: 600px;
+     margin-bottom: 50px;
+ }
+/*CSS code for the footer section on each page*/
+ .contact_container {
+     background-color: #17293D;
+     color: white;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-items: center;
+     height: 325px;
+ }
+
+ .contactus_container {
+     width: 350px;
+     font-size: 25px;
+ }
+
+ .contactus_text {
+     color: lightgray;
+ }
+
+ .some_container {
+     width: 150px;
+     font-size: 20px;
+ }
+
+ .some_list {
+     margin-top: 5px;
+     list-style-type: none;
+ }
+
+ .some_icom {
+     color: white;
+ }
+
+ .somelist_element {
+     margin: 0 0 10px 0;
+ }
+
+ .exercise_container {
+     display: flex;
+     margin-left: auto;
+     justify-content: space-between;
+     margin-right: auto;
+     flex-wrap: wrap;
+     margin-top: 60px;
+     width: 650px;
+     height: 350px;
+ }
+
+ .section_start {
+     display: inline-block;
+     justify-content: center;
+     font-size: 22px;
+     width: 350px;
+     padding-top: 80px;
+ }
+
+ .section_noquit {
+     display: inline-block;
+     justify-content: space-around;
+     font-size: 22px;
+     width: 280px;
+     max-width: 100%;
+ }
+
+ .science_text {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     font-size: 22px;
+     margin: 25px auto 60px auto;
+     width: 650px;
+ }
+
+ .buddy_image {
+     display: flex;
+     height: 350px;
+     width: 650px;
+     flex-wrap: wrap;
+     margin-bottom: 60px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .buddy_text {
+     font-size: 22px;
+     width: 650px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: 50px auto 60px auto;
+     max-width: 100%;
+ }
+
+ .weather_container {
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     flex-wrap: wrap;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 50px;
+ }
+
+ .weather {
+     width: 220px;
+     height: 300px;
+     font-size: 22px;
+     display: inline-block;
+     padding: 125px 50px 20px 0px;
+ }
+
+ .weather_image {
+     display: inline-block;
+     width: 330px;
+     height: 370px;
+     justify-content: center;
+ }
+
+ .bike_text {
+     font-size: 22px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     width: 650px;
+     height: 180px;
+     margin: 0px auto 0px auto;
+ }
+
+ .bike_image {
+     display: flex;
+     flex-wrap: wrap;
+     width: 680px;
+     max-width: 100%;
+     margin-bottom: 30px;
+     margin-right: auto;
+     margin-left: auto;
+
+ }
+
+ /*Here starts the code for my FOOd page*/
+ .food_image {
+     margin: 0 auto 60px auto;
+     display: flex;
+     justify-content: center;
+     width: 650px;
+     height: 450px;
+     flex-wrap: wrap;
+ }
+
+ .food_text {
+     font-size: 22px;
+     display: flex;
+     flex-wrap: wrap;
+     text-align: center;
+     justify-content: space-around;
+     width: 650px;
+     height: 100px;
+     margin: 20px auto 55px auto;
+ }
+
+ /* Do not ask how I managed to center all the div sections, because it took me so long just checking the page if it is aligned the way I want it*/
+
+ .breakfast_image {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     max-width: 100%;
+     width: 710px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 15px;
+ }
+
+ .credit {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     color: #676767;
+     font-size: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 60px;
+ }
+
+ .list_container {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     width: 720px;
+     align-items: center;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 20px;
+ }
+
+ .example_image {
+     display: inline-block;
+     max-width: 100%;
+     width: 300px;
+     height: 300px;
+ }
+
+ .list_images {
+     display: inline-block;
+ }
+
+ .guide_image {
+     padding-top: 15px;
+     max-width: 100%;
+     width: 300px;
+     height: 400px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .plan_text {
+     display: inline-block;
+     justify-content: center;
+     font-size: 22px;
+     width: 350px;
+     height: 250px;
+     padding-left: 30px;
+ }
+
+ .cooking_container {
+     height: 220px;
+     width: 650px;
+     font-size: 22px;
+     margin-left: auto;
+     margin-right: auto;
+     flex-wrap: wrap;
+ }
+
+ .preparation {
+     display: flex;
+     flex-wrap: wrap;
+     width: 700px;
+     height: 130px;
+     margin-top: 30px;
+     padding-left: 25px;
+     font-size: 22px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .brownie,
+ .tart,
+ .water {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     max-width: 100%;
+     width: 800px;
+     height: 550px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 15px;
+     padding-left: 22px;
+ }
+
+ .internet {
+     display: flex;
+     flex-wrap: wrap;
+     width: 600px;
+     height: 220px;
+     margin-top: 30px;
+     padding-top: 40px;
+     padding-left: 25px;
+     font-size: 22px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 40px;
+ }
+
+ .water_text {
+     display: flex;
+     flex-wrap: wrap;
+     width: 600px;
+     margin-top: 20px;
+     padding-top: 40px;
+     padding-left: 25px;
+     font-size: 22px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 40px;
+ }
+
+ /*Here ends the css code for my FOOD page*/
+ /*Motivation css code starting here*/
+ .quote_container {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     text-align: center;
+     font-size: 22px;
+     margin-top: 30;
+     margin-left: auto;
+     margin-right: auto;
+     width: 700px;
+ }
+
+ .looking {
+     justify-content: center;
+     text-align: end;
+     font-size: 22px;
+     margin-top: 70px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 90px;
+     width: 680px;
+     height: 120px;
+
+ }
+
+ .regret_section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+     flex-wrap: wrap;
+     width: 680px;
+ }
+
+ .regret_container {
+     display: flex;
+     justify-content: center;
+ }
+
+ .regret_image {
+     display: inline-block;
+     width: 250px;
+     height: 300px;
+     max-width: 100%;
+ }
+
+ .regret_text {
+     display: inline-block;
+     font-size: 22px;
+     padding-top: 10PX;
+     padding-left: 20px;
+     height: 250px;
+ }
+
+ .freetime {
+     display: inline-block;
+     font-size: 22px;
+     height: 200;
+     width: 390px;
+     padding-left: 0;
+     padding-right: 20px;
+     padding-top: 45px;
+ }
+
+ .onehour {
+     padding-left: 10px;
+     padding-right: 10px;
+     width: 290px;
+     height: 350px;
+ }
+
+ .freetime_container {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 50px;
+     width: 680px;
+ }
+
+ .challenge_image {
+     display: flex;
+     justify-content: center;
+     margin-left: auto;
+     margin-right: auto;
+     flex-wrap: wrap;
+     width: 680px;
+     height: 450px;
+     margin-bottom: 60px;
+ }
+
+ .youtext1 {
+     font-size: 22px;
+     width: 650px;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 10px;
+     margin-bottom: 50px;
+ }
+
+ .beach_image {
+     display: flex;
+     margin-left: auto;
+     margin-right: auto;
+     width: 680px;
+     margin-bottom: 25px;
+ }
+
+ .lost_text {
+     font-size: 22px;
+     width: 680px;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 10px;
+     margin-bottom: 50px;
+ }
+
+ /* Here ends the css code for my Motivation page*/
+ readmore,
+ credit,
+ readmore,
+ credit:active,
+ readmore,
+ credit:visited {
+     color: #bcbcbc;
+ }
+
+ readmore,
+ credit:hover {
+     color: #7c7c7c;
+ }
+
+ /*I added some media queries to make it responsive to different screen sizes*/
+ @media only screen and (max-width: 600px) {
+     body {
+         background-color: lightblue;
+     }
+ }
+
+
+ @media only screen and (max-width: 776px) {
+     main {
+         margin-top: 240px !important;
+     }
+ }
+
+
+ @media only screen and (min-width: 1422px) {
+     main {
+         margin-top: 150px !important;
+     }
+ }
+
+ @media only screen and (min-width: 1037px) {
+     main {
+         margin-top: 220px;
+     }
+
+     .selected_contentsection {
+         background-color: #49B8C5;
+     }
+
+     .menu_item {
+         float: left;
+     }
+
+     .menu {
+         clear: none;
+         float: right;
+         max-height: none;
+     }
+
+     .menu-icon {
+         display: none;
+     }
+ }
+
+ @media screen and (max-width: 800px) {
+
+     .left,
+     .main,
+     .right {
+         width: 100%;
+     }
+ }
